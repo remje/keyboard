@@ -1,0 +1,2 @@
+#!/bin/bash
+pipenv run qmk flash -kb planck/rev6_drop -km remje

@@ -24,6 +24,7 @@ enum planck_layers {
   _LOWER,
   _RAISE,
   _ADJUST,
+  _ACCENTS,
 };
 
 enum planck_keycodes {
@@ -33,6 +34,7 @@ enum planck_keycodes {
 
 #define RAISE MO(_RAISE)
 #define LOWER MO(_LOWER)
+#define ACCENTS MO(_ACCENTS)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -44,14 +46,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Shift|   >  |   W  |   X  |   C  |   V  |   B  |   N  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Esc  | Ctrl | Alt  | GUI  |Lower |    Space    |Raise |   é  |   à  |   è  |AltGr |
+ * | Esc  | Ctrl | Alt  | GUI  |Lower |    Space    |Raise |Acct |  Ins  |  Scr |AltGr |
  * `-----------------------------------------------------------------------------------'
  */
 [_AZERTY] = LAYOUT_planck_grid(
-    KC_DELETE, FR_A,    FR_Z,    FR_E,    FR_R,         FR_T,    FR_Y,    FR_U,         FR_I,    FR_O,    FR_P,    KC_BSPC,
-    KC_TAB,    FR_Q,    FR_S,    FR_D,    FR_F,         FR_G,    FR_H,    FR_J,         FR_K,    FR_L,    FR_M,    FR_QUOT,
-    KC_LSFT,   FR_LABK, FR_W,    FR_X,    FR_C,         FR_V,    FR_B,    FR_N,         FR_COMM, FR_SCLN, FR_COLN, KC_ENT ,
-    KC_ESCAPE, KC_LCTL, KC_LALT, KC_LGUI, MO(_LOWER),   KC_SPC,  KC_SPC,  MO(_RAISE),   FR_EACU, FR_AGRV, FR_EGRV, KC_ALGR
+    KC_DELETE, FR_A,    FR_Z,    FR_E,    FR_R,         FR_T,    FR_Y,    FR_U,         FR_I,         FR_O,    FR_P,    KC_BSPC,
+    KC_TAB,    FR_Q,    FR_S,    FR_D,    FR_F,         FR_G,    FR_H,    FR_J,         FR_K,         FR_L,    FR_M,    FR_QUOT,
+    KC_LSFT,   FR_LABK, FR_W,    FR_X,    FR_C,         FR_V,    FR_B,    FR_N,         FR_COMM,      FR_SCLN, FR_COLN, KC_ENT ,
+    KC_ESCAPE, KC_LCTL, KC_LALT, KC_LGUI, MO(_LOWER),   KC_SPC,  KC_SPC,  MO(_RAISE),   MO(_ACCENTS), KC_INS,  KC_PSCR, KC_ALGR
 ),
 /* Raise
  * ,-----------------------------------------------------------------------------------.
@@ -72,9 +74,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * |  €   |  &   |  %   |  ^   |  [   |  ]   |   -  |   _  |   #  |   `  |   @  |  \   |
+ * |  €   |  &   |  =   |      |  [   |  ]   |   -  |   _  |   #  |   `  |   @  |  \   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |  ç   |      |      |  (  |   )   | Left |  Up  | Down | Right|      |  |   |
+ * |      |      |      |      |  (  |   )   | Left |  Up  | Down | Right|      |  |   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      | °/)  | £/$  | µ *  |  {   |  }   |  §/! |  Deb |  End | Pgup | PgDwn|      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -82,8 +84,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_planck_grid(
-    ALGR(FR_AGRV), FR_AMPR, FR_UGRV, FR_CIRC, ALGR(FR_LPRN), ALGR(FR_RPRN), FR_MINS, FR_UNDS, ALGR(FR_DQUO), ALGR(FR_EGRV), ALGR(FR_AGRV), ALGR(FR_UNDS),
-    _______,       FR_CCED, _______, _______, FR_LPRN,       FR_RPRN,       KC_LEFT, KC_UP,   KC_DOWN,       KC_RIGHT,      _______,       ALGR(FR_MINS),
+    ALGR(FR_AGRV), FR_AMPR, FR_EQL,  _______, ALGR(FR_LPRN), ALGR(FR_RPRN), FR_MINS, FR_UNDS, ALGR(FR_DQUO), ALGR(FR_EGRV), ALGR(FR_AGRV), ALGR(FR_UNDS),
+    _______,       _______, _______, _______, FR_LPRN,       FR_RPRN,       KC_LEFT, KC_UP,   KC_DOWN,       KC_RIGHT,      _______,       ALGR(FR_MINS),
     _______,       FR_RPRN, FR_DLR,  FR_ASTR, ALGR(FR_QUOT), ALGR(FR_EQL),  FR_EXLM, KC_HOME, KC_END,        KC_PAGE_UP,    KC_PAGE_DOWN,  _______,
     _______,       _______, _______, _______, _______,       _______,       _______, _______,  _______,       _______,       _______,       _______
 ),
@@ -104,7 +106,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, _______,  AZERTY,  _______, _______, KC_PAUSE,
     _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  TERM_ON, TERM_OFF, _______, _______, KC_PRINT_SCREEN,
     BACKLIT, _______, _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______
-)
+),
+/* Accents
+ * ,-----------------------------------------------------------------------------------.
+ * |      |  à   |  ^/¨ |  é   |      |      |      |   ù  |      |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |  è   |     |       |      |      |      |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |  ç   |      |      |      |      |      |      |      |
+ * |------+------+------+------+------+------+------+------+------+------+------+------|
+ * |      |      |      |      |      |             |      |      |      |      |      |
+ * `-----------------------------------------------------------------------------------'
+ */
+[_ACCENTS] = LAYOUT_planck_grid(
+    _______, ALGR(FR_AGRV), FR_CIRC, FR_EACU, _______, _______, _______, _______, FR_UGRV, _______, _______, _______,
+    _______,       _______, _______, FR_EGRV, _______, _______, _______, _______, _______, _______, _______, _______,
+    _______,       _______, _______, _______, FR_CCED, _______, _______, _______, _______, _______, _______, _______,
+    _______,       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+),
 
 };
 
