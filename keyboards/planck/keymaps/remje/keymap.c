@@ -50,10 +50,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_AZERTY] = LAYOUT_planck_grid(
-    KC_DELETE, FR_A,    FR_Z,    FR_E,    FR_R,         FR_T,    FR_Y,    FR_U,         FR_I,         FR_O,    FR_P,    KC_BSPC,
-    KC_TAB,    FR_Q,    FR_S,    FR_D,    FR_F,         FR_G,    FR_H,    FR_J,         FR_K,         FR_L,    FR_M,    FR_QUOT,
-    KC_LSFT,   FR_LABK, FR_W,    FR_X,    FR_C,         FR_V,    FR_B,    FR_N,         FR_COMM,      FR_SCLN, FR_COLN, KC_ENT ,
-    KC_ESCAPE, KC_LCTL, KC_LALT, KC_LGUI, MO(_LOWER),   KC_SPC,  KC_SPC,  MO(_RAISE),   MO(_ACCENTS), KC_INS,  KC_PSCR, KC_ALGR
+    KC_DELETE, FR_A,    FR_Z,    FR_E,    FR_R,         FR_T,    FR_Y,    FR_U,         FR_I,    FR_O,    FR_P,    KC_BSPC,
+    KC_TAB,    FR_Q,    FR_S,    FR_D,    FR_F,         FR_G,    FR_H,    FR_J,         FR_K,    FR_L,    FR_M,    MO(_ACCENTS),
+    KC_LSFT,   FR_LABK, FR_W,    FR_X,    FR_C,         FR_V,    FR_B,    FR_N,         FR_COMM, FR_SCLN, FR_COLN, KC_ENT ,
+    KC_ESCAPE, KC_LCTL, KC_LALT, KC_LGUI, MO(_LOWER),   KC_SPC,  KC_SPC,  MO(_RAISE),   KC_RSFT, KC_INS,  KC_PSCR, KC_ALGR
 ),
 /* Raise
  * ,-----------------------------------------------------------------------------------.
@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |  €   |  &   |  =   |      |  [   |  ]   |   -  |   _  |   #  |   `  |   @  |  \   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |  "   |  (  |   )   | Left |  Up  | Down | Right|      |  |   |
+ * |      |      |  '   |  "   |  (  |   )   | Left |  Up  | Down | Right|      |  |   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      | °/)  | £/$  | µ *  |  {   |  }   |  §/! |  Deb |  End | Pgup | PgDwn|      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT_planck_grid(
     ALGR(FR_AGRV), FR_AMPR, FR_EQL,  _______, ALGR(FR_LPRN), ALGR(FR_RPRN), FR_MINS, FR_UNDS, ALGR(FR_DQUO), ALGR(FR_EGRV), ALGR(FR_AGRV), ALGR(FR_UNDS),
-    _______,       _______, _______, FR_DQUO, FR_LPRN,       FR_RPRN,       KC_LEFT, KC_UP,   KC_DOWN,       KC_RIGHT,      _______,       ALGR(FR_MINS),
+    _______,       _______, FR_QUOT, FR_DQUO, FR_LPRN,       FR_RPRN,       KC_LEFT, KC_UP,   KC_DOWN,       KC_RIGHT,      _______,       ALGR(FR_MINS),
     _______,       FR_RPRN, FR_DLR,  FR_ASTR, ALGR(FR_QUOT), ALGR(FR_EQL),  FR_EXLM, KC_HOME, KC_END,        KC_PAGE_UP,    KC_PAGE_DOWN,  _______,
     _______,       _______, _______, _______, _______,       _______,       _______, _______,  _______,       _______,       _______,       _______
 ),
@@ -119,10 +119,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_ACCENTS] = LAYOUT_planck_grid(
-    _______, ALGR(FR_AGRV), FR_CIRC, FR_EACU, _______, _______, _______, _______, FR_UGRV, _______, _______, _______,
-    _______,       _______, _______, FR_EGRV, _______, _______, _______, _______, _______, _______, _______, _______,
-    _______,       _______, _______, _______, FR_CCED, _______, _______, _______, _______, _______, _______, _______,
-    _______,       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+    _______, FR_AGRV, FR_CIRC, FR_EACU, _______, _______, _______, _______, FR_UGRV, _______, _______, _______,
+    _______, _______, _______, FR_EGRV, _______, _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, FR_CCED, _______, _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 ),
 
 };
