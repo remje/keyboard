@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT_planck_grid(
     ALGR(FR_AGRV), FR_AMPR, FR_EQL,  _______, ALGR(FR_LPRN), ALGR(FR_RPRN), FR_MINS, FR_UNDS, ALGR(FR_DQUO), ALGR(FR_EGRV), ALGR(FR_AGRV), ALGR(FR_UNDS),
-    _______,       _______, FR_QUOT, FR_DQUO, FR_LPRN,       FR_RPRN,       KC_LEFT, KC_UP,   KC_DOWN,       KC_RIGHT,      _______,       ALGR(FR_MINS),
+    _______,       _______, FR_QUOT, FR_DQUO, FR_LPRN,       FR_RPRN,       KC_LEFT, KC_DOWN, KC_UP,         KC_RIGHT,      _______,       ALGR(FR_MINS),
     _______,       FR_RPRN, FR_DLR,  FR_ASTR, ALGR(FR_QUOT), ALGR(FR_EQL),  FR_EXLM, KC_HOME, KC_END,        KC_PAGE_UP,    KC_PAGE_DOWN,  _______,
     _______,       _______, _______, _______, _______,       _______,       _______, _______,  _______,       _______,       _______,       _______
 ),
@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_ACCENTS] = LAYOUT_planck_grid(
-    _______, FR_AGRV, FR_CIRC, FR_EACU, _______, _______, _______, _______, FR_UGRV, _______, _______, _______,
+    _______, FR_AGRV, FR_CIRC, FR_EACU, _______, _______, _______, FR_UGRV, _______, _______, _______, _______,
     _______, _______, _______, FR_EGRV, _______, _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, FR_CCED, _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
