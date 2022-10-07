@@ -46,14 +46,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Shift|   >  |   W  |   X  |   C  |   V  |   B  |   N  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Esc  | Ctrl | Alt  | GUI  |Lower |    Space    |Raise |Acct |  Ins  |  Scr |AltGr |
+ * | Ctrl | Esc | Alt  | GUI  |Lower |    Space    |Raise |Acct |  Ins  |  Scr |AltGr |
  * `-----------------------------------------------------------------------------------'
  */
 [_AZERTY] = LAYOUT_planck_grid(
-    KC_DELETE, FR_A,    FR_Z,    FR_E,    FR_R,         FR_T,    FR_Y,    FR_U,         FR_I,    FR_O,    FR_P,    KC_BSPC,
-    KC_TAB,    FR_Q,    FR_S,    FR_D,    FR_F,         FR_G,    FR_H,    FR_J,         FR_K,    FR_L,    FR_M,    MO(_ACCENTS),
-    KC_LSFT,   FR_LABK, FR_W,    FR_X,    FR_C,         FR_V,    FR_B,    FR_N,         FR_COMM, FR_SCLN, FR_COLN, KC_ENT ,
-    KC_ESCAPE, KC_LCTL, KC_LALT, KC_LGUI, MO(_LOWER),   KC_SPC,  KC_SPC,  MO(_RAISE),   KC_RSFT, KC_INS,  KC_PSCR, KC_ALGR
+    KC_DELETE, FR_A,      FR_Z,    FR_E,    FR_R,         FR_T,    FR_Y,    FR_U,         FR_I,    FR_O,    FR_P,    KC_BSPC,
+    KC_TAB,    FR_Q,      FR_S,    FR_D,    FR_F,         FR_G,    FR_H,    FR_J,         FR_K,    FR_L,    FR_M,    MO(_ACCENTS),
+    KC_LSFT,   FR_LABK,   FR_W,    FR_X,    FR_C,         FR_V,    FR_B,    FR_N,         FR_COMM, FR_SCLN, FR_COLN, KC_ENT ,
+    KC_LCTL,   KC_ESCAPE, KC_LALT, KC_LGUI, MO(_LOWER),   KC_SPC,  KC_SPC,  MO(_RAISE),   KC_RSFT, KC_INS,  KC_PSCR, KC_ALGR
 ),
 /* Raise
  * ,-----------------------------------------------------------------------------------.
@@ -76,18 +76,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |  €   |  &   |  =   |      |  [   |  ]   |   -  |   _  |   #  |   `  |   @  |  \   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |  '   |  "   |  (  |   )   | Left |  Up  | Down | Right|      |  |   |
+ * |      |      |  '   |  "   |  (  |   )   | Left | Down |  Up  | Right|  §/! |  |   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      | °/)  | £/$  | µ *  |  {   |  }   |  §/! |  Deb |  End | Pgup | PgDwn|      |
+ * |      | °/)  | £/$  | µ *  |  {   |  }   |  Deb | PgDwn| PgUp |  End |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_planck_grid(
-    ALGR(FR_AGRV), FR_AMPR, FR_EQL,  _______, ALGR(FR_LPRN), ALGR(FR_RPRN), FR_MINS, FR_UNDS, ALGR(FR_DQUO), ALGR(FR_EGRV), ALGR(FR_AGRV), ALGR(FR_UNDS),
-    _______,       _______, FR_QUOT, FR_DQUO, FR_LPRN,       FR_RPRN,       KC_LEFT, KC_DOWN, KC_UP,         KC_RIGHT,      _______,       ALGR(FR_MINS),
-    _______,       FR_RPRN, FR_DLR,  FR_ASTR, ALGR(FR_QUOT), ALGR(FR_EQL),  FR_EXLM, KC_HOME, KC_END,        KC_PAGE_UP,    KC_PAGE_DOWN,  _______,
-    _______,       _______, _______, _______, _______,       _______,       _______, _______,  _______,       _______,       _______,       _______
+    ALGR(FR_AGRV), FR_AMPR, FR_EQL,  _______, ALGR(FR_LPRN), ALGR(FR_RPRN), FR_MINS, FR_UNDS,      ALGR(FR_DQUO), ALGR(FR_EGRV), ALGR(FR_AGRV), ALGR(FR_UNDS),
+    _______,       _______, FR_QUOT, FR_DQUO, FR_LPRN,       FR_RPRN,       KC_LEFT, KC_DOWN,      KC_UP,         KC_RIGHT,      FR_EXLM,       ALGR(FR_MINS),
+    _______,       FR_RPRN, FR_DLR,  FR_ASTR, ALGR(FR_QUOT), ALGR(FR_EQL),  KC_HOME, KC_PAGE_DOWN, KC_PAGE_UP,    KC_END,        _______,        _______,
+    _______,       _______, _______, _______, _______,       _______,       _______, _______,      _______,       _______,       _______,       _______
 ),
 /* Adjust (Lower + Raise)
  *                      v------------------------RGB CONTROL--------------------v
