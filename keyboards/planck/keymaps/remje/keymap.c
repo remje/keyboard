@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |  '   |  "   |  (  |   )   | Left | Down |  Up  | Right|  §/! |  |   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      | °/)  | £/$  | µ *  |  {   |  }   |  Deb | PgDwn| PgUp |  End |      |      |
+ * |      | °/)  | £/$  | µ *  |  {   |  }   |  Deb | PgDwn| PgUp |  End |   %  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      |      |      |      |      |
  * `-----------------------------------------------------------------------------------'
@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT_planck_grid(
     ALGR(FR_AGRV), FR_AMPR, FR_EQL,  _______, ALGR(FR_LPRN), ALGR(FR_RPRN), FR_MINS, FR_UNDS,      ALGR(FR_DQUO), ALGR(FR_EGRV), ALGR(FR_AGRV), ALGR(FR_UNDS),
     _______,       _______, FR_QUOT, FR_DQUO, FR_LPRN,       FR_RPRN,       KC_LEFT, KC_DOWN,      KC_UP,         KC_RIGHT,      FR_EXLM,       ALGR(FR_MINS),
-    _______,       FR_RPRN, FR_DLR,  FR_ASTR, ALGR(FR_QUOT), ALGR(FR_EQL),  KC_HOME, KC_PAGE_DOWN, KC_PAGE_UP,    KC_END,        _______,        _______,
+    _______,       FR_RPRN, FR_DLR,  FR_ASTR, ALGR(FR_QUOT), ALGR(FR_EQL),  KC_HOME, KC_PAGE_DOWN, KC_PAGE_UP,    KC_END,        LSFT(FR_UGRV), _______,
     _______,       _______, _______, _______, _______,       _______,       _______, _______,      _______,       _______,       _______,       _______
 ),
 /* Adjust (Lower + Raise)
